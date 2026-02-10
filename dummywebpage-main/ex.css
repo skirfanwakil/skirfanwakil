@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box; /*content will not flow out of border*/
+}
+
+.navbar{
+    height: 60px; 
+    background-color:#232f3e ;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.navlogo{
+    height: 50px;
+    width: 50px;
+    border: 2px solid transparent ;
+}
+
+.logo{
+    background-image: url(mylogo.png);
+    background-size: cover;
+    height: 50px;
+}
+.navlogo:hover{
+    border: 1.5px solid #d3d3d3;
+    border-radius:50%;
+}
+/* box two elements*/
+.navaddress{
+    margin: 3px;
+}
+.deliverto{
+color:#cccccc ;
+font-size: 0.85rem;
+margin-left: 15px;
+}
+
+.india{
+    font-size: 1rem;
+    margin-left: 3px;
+
+}
+
+.addicon{
+    display: flex;
+    align-items: center;
+}
+
+.border:hover{
+    border: 1.5px solid #d3d3d3;
+}
+
+/*3rd box of navbar*/
+.navsearch{
+    display: flex;
+    justify-content:space-evenly ;
+    width: 620px;
+    height: 40px;
+    border-radius: 5px;
+}
+.navsearch:hover{
+    border: 3px solid darkgray;
+}
+
+.searchicon{
+    width: 45px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: gray;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1.3rem;
+}
+
+.selectsearch{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+}
+
+.searchinput{
+width: 100%;
+font-size: 1rem;
+}
+
+.langg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+}
+
+/*new*/
+.nav1{
+    font-size: 0.7rem;
+}
+
+.nav2{
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/*for cart*/
+.navcart{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.navcart i{
+font-size: 2.2rem;
+}
+
+/*pannel*/
+
+.panel{
+    height: 40px;
+    background-color: rgba(35, 47,62, 0.9) ;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.poption p{
+    display: inline;
+    margin-left: 10px;
+}
+.poption a{
+    text-decoration: none;
+    color: white;
+}
+.poption{
+    width:70%;
+    font-size:0.85rem ;
+
+}
+
+.pdeal a{
+    text-decoration: none;
+    color: white;
+    font-size:0.9rem;
+    font-weight:700;
+}
+
+/* main body*/
+.herosection{
+    height: 380px;
+    background-image: url(bgphoto.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.heromsg{
+    background-color: white;
+    height: 30px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    width: 80%;
+    margin-bottom: 30px;
+
+
+}
+.heromsg a{
+    text-decoration: none;
+    font-weight: 700;
+    color: rgba(0, 0, 0,0.8) ;
+}
+
+.content{
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    color: #cccccc;
+    }
+     
+.box{
+    border: 2px solid black;
+    height: 350px;
+    width:23%;
+background-color: #232f3e;
+padding: 20px 0px 15px;
+}
+
+   
+.bimg{
+    height: 300px;
+    background-size: cover;
+}
+
+.boxc{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.footp1{
+    margin-top: 5px;
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.5rem;
+}
+
+.footp2{
+    background-color: rgb(34, 47, 61);
+    color: white;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footp2 ul{
+    margin-top: 5px;
+}
+.footp2 h2{
+    margin-bottom: 2px;
+}
+
+.footp2 ul a{
+    color: white;
+    display: block;
+    font-size: 0.8rem;
+    color: #dddddd;
+    text-decoration: none;
+}
+
+.footp3{
+    height: 100px;
+    background-color:rgba(34, 47, 61,0.9) ;
+    color: white;
+    border-top: 0.5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.p3logo{
+    background-image: url(logo2.png);
+    background-size: cover;
+    height: 50px;
+    width: 150px;
+}
+
+.footp4{
+    background-color: #232f3e;
+    color: white;
+    height: 80px;
+
+}
+
+.pages{
+    padding-top: 25px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+.pages a{
+    text-decoration: none;
+    color: white;
+}
+
+.copyright{
+    padding:5px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
