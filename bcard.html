@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SK IRFAN WAKIL Business Card</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        body {
+            font-family: 'Trebuchet MS', 'Verdana', 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            gap: 40px;
+        }
+
+        /* Standard Business Card Dimensions (3.5in x 2in) */
+        .card {
+            width: 3.5in;
+            height: 2in;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        /* FRONT SIDE (BLACK) */
+        .card-front {
+            background-color: #0d0d0d !important;
+            color: #ffffff;
+            display: flex;
+            padding: 0.25in;
+            align-items: center;
+        }
+
+        .logo-area {
+            width: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 2px solid #0055ff; /* Blue accent line */
+            padding-right: 15px;
+            height: 80%;
+        }
+
+        .logo-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .info-area {
+            width: 65%;
+            padding-left: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .name {
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 3px;
+        }
+
+        .title {
+            font-size: 8px;
+            color: #cccccc;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 8px;
+            margin-bottom: 5px;
+            color: #e0e0e0;
+        }
+
+        .icon {
+            width: 12px;
+            height: 12px;
+            background-color: #0055ff;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+            font-size: 7px;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        /* BACK SIDE (BLACK) WITH RIGHT-ALIGNED QR */
+        .card-back {
+            background-color: #0d0d0d !important;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.2in;
+        }
+
+        /* Centered Left Content Container */
+        .back-left {
+            width: 68%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-right: 10px;
+        }
+
+        .back-name {
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background-color: #ffffff;
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        /* CENTERED BLUE DOT ON DIVIDER LINE */
+        .divider-dot {
+            width: 5px;
+            height: 5px;
+            background-color: #0055ff;
+            border-radius: 50%;
+            position: absolute;
+            top: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tagline {
+            font-size: 6px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #cccccc;
+            line-height: 1.3;
+        }
+
+        .blue-dot {
+            color: #0055ff;
+            margin: 0 2px;
+        }
+
+        /* Right Side Glowing QR Box */
+        .back-right {
+            width: 28%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qr-box {
+            width: 54px;
+            height: 54px;
+            border: 2px solid #0055ff;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 3px;
+            box-shadow: 0 0 10px rgba(0, 85, 255, 0.7);
+        }
+
+        .qr-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .card {
+                box-shadow: none;
+                page-break-after: always;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- FRONT OF CARD -->
+    <div class="card card-front">
+        <div class="logo-area">
+            <img src="mylogo.png" alt="Logo" class="logo-img">
+        </div>
+        
+        <div class="info-area">
+            <div class="name">SK IRFAN WAKIL</div>
+            <div class="title">IT Professional | Tech Explorer</div>
+            
+            <div class="contact-item">
+                <span class="icon">@</span>skirfanwakil
+            </div>
+            <div class="contact-item">
+                <span class="icon">&#9993;</span>skirfanwakil@gmail.com
+            </div>
+            <div class="contact-item">
+                <span class="icon">&#9906;</span>Mumbai 400011, India
+            </div>
+        </div>
+    </div>
+
+    <!-- BACK OF CARD -->
+    <div class="card card-back">
+        <div class="back-left">
+            <div class="back-name">SK IRFAN WAKIL</div>
+            <div class="divider">
+                <div class="divider-dot"></div>
+            </div>
+            <div class="tagline">
+                TECHNOLOGY <span class="blue-dot">&#8226;</span> AI <span class="blue-dot">&#8226;</span> DESIGN <span class="blue-dot">&#8226;</span> ANALYSIS
+            </div>
+        </div>
+
+        <div class="back-right">
+            <div class="qr-box">
+                <img src="qr.jpeg" alt="QR Code">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
