@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKIRFANWAKIL - Brand Guidelines</title>
+  <style>
+    :root {
+      --jet-black: #0A0A0A;
+      --dark-slate: #1A1A1A;
+      --pure-white: #FFFFFF;
+      --platinum: #E5E5E5;
+      --electric-blue: #2563EB;
+      --border-color: #262626;
+      --text-muted: #888888;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--jet-black);
+      color: var(--platinum);
+      font-family: 'Trebuchet MS', sans-serif;
+      padding: 1.5rem 0.75rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .board-container {
+      width: 100%;
+      max-width: 1280px;
+      background-color: #050505;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* Grid Layout Helper */
+    .row {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .row-3-col {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .row-2-col {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Section Cards */
+    .card {
+      background-color: var(--dark-slate);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .card-header {
+      font-family: Verdana, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+
+    /* 1. Logos Section */
+    .logo-primary {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+
+    .logo-primary img {
+      max-width: 160px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 0.75rem;
+    }
+
+    .brand-company-name {
+      font-family: Verdana, sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      word-break: break-word;
+    }
+
+    .sub-tagline {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--platinum);
+      line-height: 1.5;
+    }
+
+    .sub-tagline span {
+      color: var(--electric-blue);
+      margin: 0 4px;
+    }
+
+    .sub-tagline .new-sub-row {
+      font-size: 0.65rem;
+      letter-spacing: 1.2px;
+      opacity: 0.8;
+      display: block;
+      margin-top: 5px;
+    }
+
+    .monogram-icon-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      min-height: 200px;
+      flex-wrap: wrap;
+      padding: 0.5rem 0;
+    }
+
+    .app-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 6px;
+      flex-shrink: 0;
+    }
+
+    .app-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* 2. Brand Story & Details */
+    .brand-story p {
+      font-size: 0.9rem;
+      color: var(--platinum);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .brand-motto {
+      color: var(--electric-blue);
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    .font-sample {
+      margin-bottom: 1rem;
+    }
+
+    .font-sample h3 {
+      font-size: 1.6rem;
+      font-weight: normal;
+    }
+
+    .color-palette {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.5rem;
+    }
+
+    .color-item {
+      text-align: center;
+    }
+
+    .color-swatch {
+      height: 50px;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .color-name {
+      font-size: 0.6rem;
+      font-weight: bold;
+      display: block;
+      word-break: break-word;
+    }
+
+    .color-hex {
+      font-size: 0.6rem;
+      color: var(--text-muted);
+    }
+
+    /* 3. Business Card Preview */
+    .card-mockup-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      align-items: center;
+      width: 100%;
+    }
+
+    .business-card-container {
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 1.75 / 1;
+      background: #000;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 1rem;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+    }
+
+    /* Business Card Front Layout */
+    .bc-front {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .bc-left-logo {
+      width: 75px;
+      height: 75px;
+      background-color: #0d0d0d;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+      flex-shrink: 0;
+    }
+
+    .bc-left-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .bc-divider {
+      width: 2px;
+      height: 75%;
+      background-color: var(--electric-blue);
+      margin: 0 0.85rem;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .bc-right-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.2rem;
+      overflow: hidden;
+    }
+
+    .bc-right-info h3 {
+      font-family: Verdana, sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      color: #fff;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .bc-right-info .bc-title {
+      font-size: 0.58rem;
+      color: #ccc;
+      margin-bottom: 0.4rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .bc-contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .bc-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.58rem;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .bc-icon {
+      width: 14px;
+      height: 14px;
+      background-color: var(--electric-blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.45rem;
+      color: #fff;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    /* Business Card Back Layout */
+    .bc-back {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 0.5rem;
+    }
+
+    .bc-back-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .bc-back-text h3 {
+      font-family: Verdana, sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .bc-back-line {
+      width: 85%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #fff, transparent);
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    .bc-back-line::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 4px;
+      height: 4px;
+      background-color: var(--electric-blue);
+      border-radius: 50%;
+    }
+
+    .bc-back-sub {
+      font-size: 0.42rem;
+      letter-spacing: 1px;
+      color: #ddd;
+      text-transform: uppercase;
+    }
+
+    .bc-back-sub span {
+      color: var(--electric-blue);
+      margin: 0 1px;
+    }
+
+    .bc-qr-code {
+      width: 55px;
+      height: 55px;
+      border-radius: 6px;
+      border: 2px solid var(--electric-blue);
+      box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #fff;
+    }
+
+    .bc-qr-code img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* 4. Social Assets */
+    .social-assets-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      text-align: center;
+    }
+
+    .avatar-circle {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      margin: 0 auto 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: #000;
+      padding: 4px;
+    }
+
+    .avatar-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .banner-preview {
+      width: 100%;
+      min-height: 110px;
+      background: #000;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      margin-top: 1rem;
+      overflow: hidden;
+    }
+
+    .banner-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .banner-left img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .banner-preview .sub-tagline {
+      font-size: 0.5rem;
+      letter-spacing: 0.8px;
+      margin-top: 2px;
+    }
+
+    .banner-right-watermark {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .banner-right-watermark img {
+      height: 90px;
+      opacity: 0.15;
+      object-fit: contain;
+    }
+
+    /* 5. Pattern Watermark */
+    .brand-pattern {
+      height: 120px;
+      background-color: #0a0a0a;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-pattern::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('mylogo.png');
+      background-size: 40px;
+      background-repeat: repeat;
+      opacity: 0.12;
+    }
+
+    .usage-list {
+      list-style: none;
+    }
+
+    .usage-list li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.65rem;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+
+    .usage-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--electric-blue);
+      font-weight: bold;
+    }
+
+    /* Footer */
+    .board-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    /* ==========================================
+       MEDIA QUERIES (RESPONSIVE RULES)
+       ========================================== */
+    @media (max-width: 992px) {
+      .row-3-col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 0.75rem 0.35rem;
+      }
+
+      .board-container {
+        padding: 1rem;
+        border-radius: 8px;
+      }
+
+      .row-3-col, .row-2-col {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 1rem;
+      }
+
+      .color-palette {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+      }
+
+      .banner-preview {
+        padding: 0.75rem;
+      }
+
+      .banner-right-watermark {
+        display: none; /* Hide watermark on small mobile screens to prevent text clash */
+      }
+
+      .board-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .bc-left-logo {
+        width: 60px;
+        height: 60px;
+      }
+      .bc-divider {
+        margin: 0 0.5rem;
+      }
+      .bc-right-info h3 {
+        font-size: 0.75rem;
+      }
+      .bc-right-info .bc-title,
+      .bc-contact-item {
+        font-size: 0.52rem;
+      }
+      .color-palette {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="board-container">
+
+    <!-- ROW 1: LOGOS -->
+    <div class="row row-2-col">
+      
+      <!-- Primary Logo -->
+      <div class="card">
+        <div class="card-header">Primary Logo</div>
+        <div class="logo-primary">
+          <img src="mylogo.png" alt="SKIRFANWAKIL Logo">
+          <h2 class="brand-company-name">SKIRFANWAKIL</h2>
+          <div class="sub-tagline">
+            Frontend Developer | UI/UX Enthusiast
+            <span class="new-sub-row">Frontend • Technology • Design • Analysis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logo Icons (Full Size) -->
+      <div class="card">
+        <div class="card-header">Logo Icon (For Small Use)</div>
+        <div class="monogram-icon-grid">
+          <div class="app-icon" style="background: #fff;">
+            <img src="logo.png" alt="Icon">
+          </div>
+          <div class="app-icon" style="background: #111; border: 1px solid #333;">
+            <img src="logo.png" alt="Icon" style="filter: invert(1);">
+          </div>
+          <div class="app-icon" style="background: #2563EB;">
+            <img src="logo.png" alt="Icon">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW 2: STORY, TYPOGRAPHY, COLORS -->
+    <div class="row row-3-col">
+
+      <!-- Brand Story -->
+      <div class="card">
+        <div class="card-header">Brand Story</div>
+        <div class="brand-story">
+          <p>The crown is crafted using the letters of WAKIL, my father's name — the foundation of my journey. The monogram below represents my identity and vision.</p>
+          <div class="brand-motto">Rooted in Love. Driven by Purpose.</div>
+        </div>
+      </div>
+
+      <!-- Typography -->
+      <div class="card">
+        <div class="card-header">Typography</div>
+        <div class="font-sample">
+          <span style="font-size: 0.65rem; color: var(--text-muted);">PRIMARY FONT</span>
+          <h3 style="font-family: Verdana, sans-serif;">Verdana</h3>
+        </div>
+        <div class="font-sample">
+          <span style="font-size: 0.65rem; color: var(--text-muted);">SECONDARY FONT</span>
+          <h3 style="font-family: 'Trebuchet MS', sans-serif;">Trebuchet MS</h3>
+          <p style="font-size: 0.75rem; color: var(--text-muted);">Clean. Modern. Highly Readable.</p>
+        </div>
+      </div>
+
+      <!-- Color Palette -->
+      <div class="card">
+        <div class="card-header">Color Palette</div>
+        <div class="color-palette">
+          <div class="color-item">
+            <div class="color-swatch" style="background: #0A0A0A;"></div>
+            <span class="color-name">JET BLACK</span>
+            <span class="color-hex">#0A0A0A</span>
+          </div>
+          <div class="color-item">
+            <div class="color-swatch" style="background: #1A1A1A;"></div>
+            <span class="color-name">DARK SLATE</span>
+            <span class="color-hex">#1A1A1A</span>
+          </div>
+          <div class="color-item">
+            <div class="color-swatch" style="background: #FFFFFF;"></div>
+            <span class="color-name" style="color: #fff;">PURE WHITE</span>
+            <span class="color-hex">#FFFFFF</span>
+          </div>
+          <div class="color-item">
+            <div class="color-swatch" style="background: #E5E5E5;"></div>
+            <span class="color-name" style="color: #fff;">PLATINUM</span>
+            <span class="color-hex">#E5E5E5</span>
+          </div>
+          <div class="color-item">
+            <div class="color-swatch" style="background: #2563EB;"></div>
+            <span class="color-name">ELECTRIC BLUE</span>
+            <span class="color-hex">#2563EB</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW 3: BUSINESS CARD & SOCIAL MEDIA ASSETS -->
+    <div class="row row-2-col">
+
+      <!-- Business Card Section -->
+      <div class="card">
+        <div class="card-header">Business Card</div>
+        <div class="card-mockup-wrapper">
+          
+          <!-- Front Side -->
+          <div class="business-card-container">
+            <div class="bc-front">
+              <div class="bc-left-logo">
+                <img src="mylogo.png" alt="Monogram">
+              </div>
+              <div class="bc-divider"></div>
+              <div class="bc-right-info">
+                <h3>SKIRFANWAKIL</h3>
+                <div class="bc-title"> Frontend Developer | UI/UX Enthusiast</div>
+                <div class="bc-contact-list">
+                  <div class="bc-contact-item">
+                    <div class="bc-icon">@</div>
+                    <span>skirfanwakil</span>
+                  </div>
+                  <div class="bc-contact-item">
+                    <div class="bc-icon">✉</div>
+                    <span>skirfanwakil@gmail.com</span>
+                  </div>
+                  <div class="bc-contact-item">
+                    <div class="bc-icon">📍</div>
+                    <span>Mumbai 400011, India</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Back Side -->
+          <div class="business-card-container">
+            <div class="bc-back">
+              <div class="bc-back-text">
+                <h3>SKIRFANWAKIL</h3>
+                <div class="bc-back-line"></div>
+                <div class="bc-back-sub">TECHNOLOGY <span>•</span> Frontend <span>•</span> DESIGN <span>•</span> ANALYSIS</div>
+              </div>
+              <div class="bc-qr-code">
+                <img src="qr.jpeg" alt="QR Code">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Social Media, Avatar & Banner -->
+      <div class="card">
+        <div class="card-header">Social Media / Banner / Cover</div>
+        
+        <div class="social-assets-grid">
+          <div>
+            <div class="avatar-circle">
+              <img src="mylogo.png" alt="Social Profile">
+            </div>
+            <span style="font-size: 0.7rem; color: var(--text-muted);">Social Profile</span>
+          </div>
+
+          <div>
+            <div class="avatar-circle" style="border-radius: 16px; border-color: #333;">
+              <img src="mylogo.png" alt="Github Avatar">
+            </div>
+            <span style="font-size: 0.7rem; color: var(--text-muted);">Github / Avatar</span>
+          </div>
+
+          <div>
+            <div class="avatar-circle">
+              <img src="mylogo.png" alt="Favicon">
+            </div>
+            <span style="font-size: 0.7rem; color: var(--text-muted);">Favicon</span>
+          </div>
+        </div>
+
+        <!-- Banner with Full Logo -->
+        <div class="banner-preview">
+          <div class="banner-left">
+            <img src="mylogo.png" alt="Logo">
+            <div>
+              <h4 style="font-size: 0.85rem; letter-spacing: 1px;">SKIRFANWAKIL</h4>
+              <div class="sub-tagline">TECHNOLOGY • AI • DESIGN • ANALYSIS</div>
+            </div>
+          </div>
+          <div class="banner-right-watermark">
+            <img src="mylogo.png" alt="Watermark">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW 4: PATTERN & USAGE -->
+    <div class="row row-2-col">
+
+      <!-- Brand Pattern -->
+      <div class="card">
+        <div class="card-header">Brand Pattern (Watermark)</div>
+        <div class="brand-pattern"></div>
+      </div>
+
+      <!-- Usage Rules -->
+      <div class="card">
+        <div class="card-header">Usage Guidelines</div>
+        <ul class="usage-list">
+          <li>Use the primary logo on websites, documents, and official communications.</li>
+          <li>Use the icon mark for social profiles and small applications.</li>
+          <li>Maintain clear space around the logo equal to the height of the crown.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="board-footer">
+      <div>SKIRFANWAKIL • PERSONAL BRAND IDENTITY</div>
+      <div style="color: var(--electric-blue); font-weight: bold;">ROOTED IN LOVE. DRIVEN BY PURPOSE.</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
