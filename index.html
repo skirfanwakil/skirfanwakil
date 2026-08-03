@@ -14,7 +14,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
             border: none !important;
         }
 
@@ -30,7 +30,7 @@
             max-width: 800px;
             margin: auto;
             background: #ffffff;
-            padding: 0;
+            padding: 5px;
         }
 
         /* Header */
@@ -40,11 +40,11 @@
         }
 
         h1 {
-            font-size: 20pt;
+            font-size: 15pt;
             font-weight: normal;
             text-decoration: underline !important;
             letter-spacing: 0.5px;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         h1 strong {
@@ -52,14 +52,13 @@
         }
 
         .contact-info {
-            font-size: 9pt;
+            font-size: 8.5pt;
             color: #000000;
         }
 
-        /* Links styling - NO UNDERLINE */
-        a {
+        .contact-info a {
             color: #000000;
-            text-decoration: none !important;
+            text-decoration: none;
         }
 
         /* Sections */
@@ -68,10 +67,10 @@
         }
 
         .section-title {
-            font-size: 9pt;
+            font-size: 10.5pt;
             font-weight: bold;
             color: #000000;
-            margin-bottom: 2px;
+            margin-bottom: 3px;
         }
 
         p {
@@ -86,6 +85,11 @@
             font-size: 9pt;
         }
 
+        a {
+            color: #000000;
+            text-decoration: underline;
+        }
+
         /* Achievements standard bullets */
         .achievements-list {
             list-style-type: disc;
@@ -97,13 +101,13 @@
             font-size: 9pt;
         }
 
-        /* Bottom Footer Link - NO UNDERLINE */
+        /* Bottom Footer Link */
         .footer-link {
             text-align: center;
             font-weight: bold;
             font-style: italic;
-            font-size: 8.5pt;
-            margin-top: 14px;
+            font-size: 8pt;
+            margin-top: 15px;
         }
 
         /* Print Button & Media Query */
@@ -136,7 +140,7 @@
 <body>
 
     <div class="print-btn-container no-print">
-        <button class="print-btn" onclick="window.print()">Print Resume (A4 Single Page)</button>
+        <button class="print-btn" onclick="window.print()">Print Resume (A4)</button>
     </div>
 
     <div class="resume-container">
@@ -186,7 +190,7 @@
         <section>
             <div class="section-title">Experience:</div>
             <div class="bullet-item">•<strong>Data Entry Operator</strong></div>
-            <p style="margin-left: 10px; margin-bottom: 2px;">Accurately enters, updates, and maintains information in computer systems or databases.</p>
+            <p style="margin-left: 10px; margin-bottom: 3px;">Accurately enters, updates, and maintains information in computer systems or databases.</p>
             <div class="bullet-item">•<strong>Home Tutor</strong></div>
             <p style="margin-left: 10px;">Teaches students by explaining concepts, solving doubts, and helping improve academic performance.</p>
         </section>
