@@ -7,22 +7,22 @@
     <style>
         @page {
             size: A4;
-            margin: 12mm 15mm;
+            margin: 10mm 15mm;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             border: none !important;
         }
 
         body {
             background-color: #ffffff;
             color: #000000;
-            line-height: 1.3;
-            font-size: 9pt;
+            line-height: 1.25;
+            font-size: 8.5pt;
         }
 
         .resume-container {
@@ -30,17 +30,17 @@
             max-width: 800px;
             margin: auto;
             background: #ffffff;
-            padding: 5px;
+            padding: 0;
         }
 
         /* Header */
         header {
             text-align: center;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         h1 {
-            font-size: 15pt;
+            font-size: 14pt;
             font-weight: normal;
             text-decoration: underline !important;
             letter-spacing: 0.5px;
@@ -52,62 +52,58 @@
         }
 
         .contact-info {
-            font-size: 8.5pt;
+            font-size: 8pt;
             color: #000000;
         }
 
-        .contact-info a {
+        /* Links styling - NO UNDERLINE */
+        a {
             color: #000000;
-            text-decoration: none;
+            text-decoration: none !important;
         }
 
         /* Sections */
         section {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .section-title {
-            font-size: 10.5pt;
+            font-size: 10pt;
             font-weight: bold;
             color: #000000;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         p {
-            font-size: 9pt;
+            font-size: 8.5pt;
             color: #000000;
             text-align: justify;
         }
 
         .bullet-item {
-            margin-bottom: 3px;
+            margin-bottom: 2px;
             text-align: justify;
-            font-size: 9pt;
-        }
-
-        a {
-            color: #000000;
-            text-decoration: underline;
+            font-size: 8.5pt;
         }
 
         /* Achievements standard bullets */
         .achievements-list {
             list-style-type: disc;
-            padding-left: 20px;
+            padding-left: 18px;
         }
 
         .achievements-list li {
             margin-bottom: 2px;
-            font-size: 9pt;
+            font-size: 8.5pt;
         }
 
-        /* Bottom Footer Link */
+        /* Bottom Footer Link - NO UNDERLINE */
         .footer-link {
             text-align: center;
             font-weight: bold;
             font-style: italic;
-            font-size: 8pt;
-            margin-top: 15px;
+            font-size: 7.5pt;
+            margin-top: 10px;
         }
 
         /* Print Button & Media Query */
@@ -140,7 +136,7 @@
 <body>
 
     <div class="print-btn-container no-print">
-        <button class="print-btn" onclick="window.print()">Print Resume (A4)</button>
+        <button class="print-btn" onclick="window.print()">Print Resume (A4 Single Page)</button>
     </div>
 
     <div class="resume-container">
@@ -190,9 +186,9 @@
         <section>
             <div class="section-title">Experience:</div>
             <div class="bullet-item">•<strong>Data Entry Operator</strong></div>
-            <p style="margin-left: 10px; margin-bottom: 3px;">Accurately enters, updates, and maintains information in computer systems or databases.</p>
+            <p style="margin-left: 8px; margin-bottom: 2px;">Accurately enters, updates, and maintains information in computer systems or databases.</p>
             <div class="bullet-item">•<strong>Home Tutor</strong></div>
-            <p style="margin-left: 10px;">Teaches students by explaining concepts, solving doubts, and helping improve academic performance.</p>
+            <p style="margin-left: 8px;">Teaches students by explaining concepts, solving doubts, and helping improve academic performance.</p>
         </section>
 
         <!-- Achievements -->
