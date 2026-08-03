@@ -3,215 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Shaikh Mohd Irfan</title>
+    <title>Shaikh Mohd Irfan Mohd Wakil - Resume</title>
     <style>
-        @page {
-            size: A4;
-            margin: 12mm 15mm;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-            border: none !important;
-        }
-
         body {
-            background-color: #ffffff;
-            color: #000000;
-            line-height: 1.3;
-            font-size: 9pt;
-        }
-
-        .resume-container {
-            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
             max-width: 800px;
-            margin: auto;
-            background: #ffffff;
-            padding: 5px;
+            margin: 20px auto;
+            padding: 0 20px;
         }
-
-        /* Header */
-        header {
-            text-align: center;
-            margin-bottom: 12px;
-        }
-
         h1 {
-            font-size: 15pt;
-            font-weight: normal;
-            text-decoration: underline !important;
-            letter-spacing: 0.5px;
-            margin-bottom: 3px;
+            color: #1a252f;
+            margin-bottom: 5px;
+            text-transform: uppercase;
         }
-
-        h1 strong {
-            font-weight: bold;
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
         }
-
         .contact-info {
-            font-size: 8.5pt;
-            color: #000000;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
         }
-
         .contact-info a {
-            color: #000000;
+            color: #2980b9;
             text-decoration: none;
         }
-
-        /* Sections */
-        section {
-            margin-bottom: 10px;
-        }
-
-        .section-title {
-            font-size: 10.5pt;
-            font-weight: bold;
-            color: #000000;
-            margin-bottom: 3px;
-        }
-
-        p {
-            font-size: 9pt;
-            color: #000000;
-            text-align: justify;
-        }
-
-        .bullet-item {
-            margin-bottom: 3px;
-            text-align: justify;
-            font-size: 9pt;
-        }
-
-        a {
-            color: #000000;
+        .contact-info a:hover {
             text-decoration: underline;
         }
-
-        /* Achievements standard bullets */
-        .achievements-list {
-            list-style-type: disc;
+        ul {
+            margin-top: 5px;
             padding-left: 20px;
         }
-
-        .achievements-list li {
-            margin-bottom: 2px;
-            font-size: 9pt;
+        li {
+            margin-bottom: 6px;
         }
-
-        /* Bottom Footer Link */
-        .footer-link {
-            text-align: center;
+        .project-title, .job-title {
             font-weight: bold;
-            font-style: italic;
-            font-size: 8pt;
-            margin-top: 15px;
         }
-
-        /* Print Button & Media Query */
-        .print-btn-container {
-            text-align: center;
-            margin: 15px 0;
+        a {
+            color: #2980b9;
+            text-decoration: none;
         }
-
-        .print-btn {
-            background-color: #000000;
-            color: #ffffff;
-            border: none;
-            padding: 8px 16px;
-            font-size: 12px;
-            cursor: pointer;
-            border-radius: 4px;
+        a:hover {
+            text-decoration: underline;
         }
-
-        @media print {
-            .no-print {
-                display: none;
-            }
-            .resume-container {
-                padding: 0;
-                max-width: 100%;
-            }
+        .drive-link-section {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #2980b9;
         }
     </style>
 </head>
 <body>
 
-    <div class="print-btn-container no-print">
-        <button class="print-btn" onclick="window.print()">Print Resume (A4)</button>
-    </div>
-
-    <div class="resume-container">
-        
-        <!-- Header -->
-        <header>
-            <h1>SHAIKH MOHD <strong>IRFAN</strong> MOHD WAKIL</h1>
-            <div class="contact-info">
-                Byculla, Mumbai 400011 | <a href="tel:+918657944080">+91 8657944080</a> | <a href="mailto:skirfanwakil@gmail.com">skirfanwakil@gmail.com</a>
-            </div>
-        </header>
-
-        <!-- Profile -->
-        <section>
-            <div class="section-title">Profile:</div>
-            <p>B.Sc. Information Technology (Final Year) student interested in management and technology. Experienced in product design, research, and project planning through academic projects and hackathons. Looking for an opportunity to learn and contribute in a professional environment.</p>
-        </section>
-
-        <!-- Skills -->
-        <section>
-            <div class="section-title">Skills:</div>
-            <div class="bullet-item">•<strong>Core Skills:</strong> Product Planning, Requirement Analysis, Research, Team Collaboration, Digital File Management, content writing, presentation</div>
-            <div class="bullet-item">•<strong>Tools:</strong> Microsoft Word, Excel, PowerPoint, Google Docs, Google Sheets, Google Forms, Canva</div>
-            <div class="bullet-item">•<strong>Programming Basics:</strong> Python, Java, C, C++, C#, R, JavaScript, HTML, CSS</div>
-            <div class="bullet-item">•<strong>Database:</strong> SQL, MySQL, Microsoft Access</div>
-        </section>
-
-        <!-- Projects -->
-        <section>
-            <div class="section-title">Projects</div>
-            <div class="bullet-item">•<a href="https://github.com/skirfanwakil/find-your-space" target="_blank"><strong>Find Your Space | Product Planning & System Design</strong></a> - Designed the platform workflow, user interface, filtering logic, and Google Sheets database structure to deliver personalized place recommendations based on user preferences.</div>
-            <div class="bullet-item">•<a href="https://github.com/skirfanwakil/UnityLink" target="_blank"><strong>UnityLink | Product Planning & System Design</strong></a> - Conceptualized the platform, defined the UI workflow, resource matching logic, and database structure, and collaborated with the development team to build a functional prototype.</div>
-            <div class="bullet-item">•<a href="https://www.google.com/search?q=skirfanwakil" target="_blank"><strong>Personal Identity SEO Optimization</strong></a> - Built and optimized a personal digital identity, achieving first-page Google visibility through SEO, content optimization, and consistent cross-platform branding.</div>
-            <div class="bullet-item">•<a href="https://drive.google.com/file/d/16SxlqVFWt0ELJ20l2qlh9JhVENWo0yL_/view?usp=drive_link" target="_blank"><strong>Digital Payment Awareness Program | Researcher</strong></a> - Conducted field research by designing surveys, collecting and analyzing primary data, and led a digital payment awareness initiative promoting secure transactions, fraud prevention, and safe digital payment practice. (<a href="https://drive.google.com/file/d/16SxlqVFWt0ELJ20l2qlh9JhVENWo0yL_/view?usp=drive_link" target="_blank">Research Report</a>)</div>
-        </section>
-
-        <!-- Education -->
-        <section>
-            <div class="section-title">Education:</div>
-            <div class="bullet-item">•<strong>BSc Information Technology</strong> (Final Year), University of Mumbai — CGPA (upto 2nd year) : 8.77</div>
-            <div class="bullet-item">•<strong>MHTCET(PCM) 2024</strong> — 86.2190813%ile (<a href="https://drive.google.com/file/d/111S1lvkcW8ReyydUBFwQCqSEIsTrvwfw/view?usp=drive_link" target="_blank">CET Result</a>)</div>
-            <div class="bullet-item">•<strong>HSC</strong> – Science Stream (PCMB + IT) — Score: 62.67% (<a href="https://drive.google.com/file/d/1hpIZM9I1jYnqDxgvwnYXJSHEZ8MXDeaN/view?usp=drive_link" target="_blank">12th Result</a>)</div>
-            <div class="bullet-item">•<strong>SSC</strong> – Barkat English High School — Score: 83.20% (<a href="https://drive.google.com/file/d/1qILQYra7D3rTezGFJ_f6mgGjWIeThpwK/view?usp=drive_link" target="_blank">10th Result</a>)</div>
-        </section>
-
-        <!-- Experience -->
-        <section>
-            <div class="section-title">Experience:</div>
-            <div class="bullet-item">•<strong>Data Entry Operator</strong></div>
-            <p style="margin-left: 10px; margin-bottom: 3px;">Accurately enters, updates, and maintains information in computer systems or databases.</p>
-            <div class="bullet-item">•<strong>Home Tutor</strong></div>
-            <p style="margin-left: 10px;">Teaches students by explaining concepts, solving doubts, and helping improve academic performance.</p>
-        </section>
-
-        <!-- Achievements -->
-        <section>
-            <div class="section-title">Achievements:</div>
-            <ul class="achievements-list">
-                <li>1st Position, Inter College Model Presentation Competition</li>
-                <li>2nd Position, IT PPT Competition, Parvaaz 2023</li>
-                <li>3rd Position, Best Business Planning, Parvaaz 2025</li>
-                <li>3rd Position, Corporate Chanakya, Parvaaz 2025</li>
-                <li>Participated in multiple inter-college competitions, hackathons, and tech/non-tech events</li>
-            </ul>
-        </section>
-
-        <!-- Footer Link -->
-        <div class="footer-link">
-            <a href="https://drive.google.com/drive/folders/1nhu1qyxtzMBHBfKPGdiHfEbXrY_Nma7p?usp=drive_link" target="_blank">RESULTS AND CERTIFICATE - Google Drive Link</a>
+    <header>
+        <h1>Shaikh Mohd Irfan Mohd Wakil</h1>
+        <div class="contact-info">
+            Byculla, Mumbai 400011 | 
+            <a href="tel:+918657944080">+91 8657944080</a> | 
+            <a href="mailto:skirfanwakil@gmail.com">skirfanwakil@gmail.com</a>
         </div>
+    </header>
 
+    <section>
+        <h2>Profile</h2>
+        <p>B.Sc. Information Technology (Final Year) student interested in management and technology. Experienced in product design, research, and project planning through academic projects and hackathons. Looking for an opportunity to learn and contribute in a professional environment.</p>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Core Skills:</strong> Product Planning, Requirement Analysis, Research, Team Collaboration, Digital File Management, Content Writing, Presentation</li>
+            <li><strong>Tools:</strong> Microsoft Word, Excel, PowerPoint, Google Docs, Google Sheets, Google Forms, Canva</li>
+            <li><strong>Programming Basics:</strong> Python, Java, C, C++, C#, R, JavaScript, HTML, CSS</li>
+            <li><strong>Database:</strong> SQL, MySQL, Microsoft Access</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/skirfanwakil/find-your-space" class="project-title" target="_blank">Find Your Space | Product Planning & System Design</a>: Designed the platform workflow, user interface, filtering logic, and Google Sheets database structure to deliver personalized place recommendations based on user preferences.
+            </li>
+            <li>
+                <a href="https://github.com/skirfanwakil/UnityLink" class="project-title" target="_blank">UnityLink | Product Planning & System Design</a>: Conceptualized the platform, defined the UI workflow, resource matching logic, and database structure, and collaborated with the development team to build a functional prototype.
+            </li>
+            <li>
+                <a href="https://www.google.com/search?q=skirfanwakil" class="project-title" target="_blank">Personal Identity SEO Optimization</a>: Built and optimized a personal digital identity, achieving first-page Google visibility through SEO, content optimization, and consistent cross-platform branding.
+            </li>
+            <li>
+                <a href="https://drive.google.com/file/d/16SxlqVFWt0ELJ20l2qlh9JhVENWo0yL_/view?usp=drive_link" class="project-title" target="_blank">Digital Payment Awareness Program | Researcher</a>: Conducted field research by designing surveys, collecting and analyzing primary data, and led a digital payment awareness initiative promoting secure transactions, fraud prevention, and safe digital payment practice. (<a href="https://drive.google.com/file/d/16SxlqVFWt0ELJ20l2qlh9JhVENWo0yL_/view?usp=drive_link" target="_blank">Research Report</a>)
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <ul>
+            <li><strong>BSc Information Technology (Final Year)</strong>, University of Mumbai — CGPA (upto 2nd year): 8.77</li>
+            <li><strong>MHTCET(PCM) 2024</strong> — 86.2190813%ile (<a href="https://drive.google.com/file/d/111S1lvkcW8ReyydUBFwQCqSEIsTrvwfw/view?usp=drive_link" target="_blank">CET Result</a>)</li>
+            <li><strong>HSC – Science Stream (PCMB + IT)</strong> — Score: 62.67% (<a href="https://drive.google.com/file/d/1hpIZM9I1jYnqDxgvwnYXJSHEZ8MXDeaN/view?usp=drive_link" target="_blank">12th Result</a>)</li>
+            <li><strong>SSC – Barkat English High School</strong> — Score: 83.20% (<a href="https://drive.google.com/file/d/1qILQYra7D3rTezGFJ_f6mgGjWIeThpwK/view?usp=drive_link" target="_blank">10th Result</a>)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <ul>
+            <li>
+                <span class="job-title">Data Entry Operator</span><br>
+                Accurately enters, updates, and maintains information in computer systems or databases.
+            </li>
+            <li>
+                <span class="job-title">Home Tutor</span><br>
+                Teaches students by explaining concepts, solving doubts, and helping improve academic performance.
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Achievements</h2>
+        <ul>
+            <li>1st Position, Inter College Model Presentation Competition</li>
+            <li>2nd Position, IT PPT Competition, Parvaaz 2023</li>
+            <li>3rd Position, Best Business Planning, Parvaaz 2025</li>
+            <li>3rd Position, Corporate Chanakya, Parvaaz 2025</li>
+            <li>Participated in multiple inter-college competitions, hackathons, and tech/non-tech events</li>
+        </ul>
+    </section>
+
+    <div class="drive-link-section">
+        <strong>Document Verification:</strong> 
+        <a href="https://drive.google.com/drive/folders/1nhu1qyxtzMBHBfKPGdiHfEbXrY_Nma7p?usp=drive_link" target="_blank">RESULTS AND CERTIFICATE - Google Drive Folder</a>
     </div>
 
 </body>
