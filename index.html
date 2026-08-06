@@ -3,148 +3,431 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaikh Mohd Irfan Mohd Wakil - Resume</title>
+    <title>Shaikh Mohd Irfan | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0284c7;
+            --border: #334155;
+            --badge-bg: #0f172a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
             line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
+            padding: 2rem 1rem;
         }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Hero / Header Section */
+        header {
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2rem;
+        }
+
         h1 {
-            color: #1a252f;
-            margin-bottom: 5px;
-            text-transform: uppercase;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
         }
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 5px;
-            margin-top: 25px;
-            text-transform: uppercase;
-            font-size: 1.2rem;
+
+        .tagline {
+            color: var(--accent);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
         }
-        .contact-info {
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
             font-size: 0.95rem;
-            margin-bottom: 20px;
+            color: var(--text-muted);
         }
-        .contact-info a {
-            color: #2980b9;
+
+        .contact-bar a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-bar a:hover {
+            color: var(--accent);
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: var(--border);
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        /* Grid & Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .card-title a {
+            color: inherit;
             text-decoration: none;
         }
-        .contact-info a:hover {
-            text-decoration: underline;
+
+        .card-title a:hover {
+            color: var(--accent);
         }
-        ul {
-            margin-top: 5px;
-            padding-left: 20px;
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 500;
         }
-        li {
-            margin-bottom: 6px;
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
         }
-        .project-title, .job-title {
-            font-weight: bold;
+
+        /* Badges / Tech Stack */
+        .skills-group {
+            margin-bottom: 1.25rem;
         }
-        a {
-            color: #2980b9;
+
+        .skills-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .badge {
+            background-color: var(--badge-bg);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+        }
+
+        /* Lists */
+        .list {
+            list-style: none;
+        }
+
+        .list-item {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .list-item::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Buttons / Action Links */
+        .btn {
+            display: inline-block;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
             text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background 0.2s, border-color 0.2s;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .btn:hover {
+            border-color: var(--accent);
+            background-color: var(--border);
+            color: var(--accent);
         }
-        .drive-link-section {
-            margin-top: 30px;
-            padding: 10px;
-            background-color: #f8f9fa;
-            border-left: 4px solid #2980b9;
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Shaikh Mohd Irfan Mohd Wakil</h1>
-        <div class="contact-info">
-            Byculla, Mumbai 400011 | 
-            <a href="tel:+918657944080">+91 8657944080</a> | 
-            <a href="mailto:skirfanwakil@gmail.com">skirfanwakil@gmail.com</a>
-        </div>
-    </header>
+    <div class="container">
 
-    <section>
-        <h2>Profile</h2>
-        <p>B.Sc. Information Technology (Final Year) student interested in management and technology. Experienced in product design, research, and project planning through academic projects and hackathons. Looking for an opportunity to learn and contribute in a professional environment.</p>
-    </section>
+        <!-- HEADER / HERO -->
+        <header>
+            <h1>Shaikh Mohd Irfan</h1>
+            <div class="tagline">B.Sc. IT Final Year Student | Product Planning & Technology</div>
+            <div class="contact-bar">
+                <span>📍 Byculla, Mumbai 400011</span>
+                <span>•</span>
+                <a href="tel:+918657944080">📞 +91 8657944080</a>
+                <span>•</span>
+                <a href="mailto:skirfanwakil@gmail.com">✉️ skirfanwakil@gmail.com</a>
+            </div>
+        </header>
 
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Core Skills:</strong> Product Planning, Requirement Analysis, Research, Team Collaboration, Digital File Management, Content Writing, Presentation</li>
-            <li><strong>Tools:</strong> Microsoft Word, Excel, PowerPoint, Google Docs, Google Sheets, Google Forms, Canva</li>
-            <li><strong>Programming Basics:</strong> Python, Java, C, C++, C#, R, JavaScript, HTML, CSS</li>
-            <li><strong>Database:</strong> SQL, MySQL, Microsoft Access</li>
-        </ul>
-    </section>
+        <!-- ABOUT -->
+        <section>
+            <h2>About</h2>
+            <p>
+                Interested in the intersection of management and technology. Experienced in product design, research, and project planning through academic projects and hackathons. Looking for opportunities to learn, contribute, and solve real-world problems in a collaborative professional environment.
+            </p>
+        </section>
 
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <a href="https://github.com/skirfanwakil/find-your-space" class="project-title" target="_blank">Find Your Space | Product Planning & System Design</a>: Designed the platform workflow, user interface, filtering logic, and Google Sheets database structure to deliver personalized place recommendations based on user preferences.
-            </li>
-            <li>
-                <a href="https://github.com/skirfanwakil/UnityLink" class="project-title" target="_blank">UnityLink | Product Planning & System Design</a>: Conceptualized the platform, defined the UI workflow, resource matching logic, and database structure, and collaborated with the development team to build a functional prototype.
-            </li>
-            <li>
-                <a href="https://www.google.com/search?q=skirfanwakil" class="project-title" target="_blank">Personal Identity SEO Optimization</a>: Built and optimized a personal digital identity, achieving first-page Google visibility through SEO, content optimization, and consistent cross-platform branding.
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/16SxlqVFWt0ELJ20l2qlh9JhVENWo0yL_/view?usp=drive_link" class="project-title" target="_blank">Digital Payment Awareness Program | Researcher</a>: Conducted field research by designing surveys, collecting and analyzing primary data, and led a digital payment awareness initiative promoting secure transactions, fraud prevention, and safe digital payment practice. (<a href="https://drive.google.com/file/d/16SxlqVFWt0ELJ20l2qlh9JhVENWo0yL_/view?usp=drive_link" target="_blank">Research Report</a>)
-            </li>
-        </ul>
-    </section>
+        <!-- PROJECTS -->
+        <section>
+            <h2>Featured Projects</h2>
+            <div class="grid grid-2">
 
-    <section>
-        <h2>Education</h2>
-        <ul>
-            <li><strong>BSc Information Technology (Final Year)</strong>, University of Mumbai — CGPA (upto 2nd year): 8.77</li>
-            <li><strong>MHTCET(PCM) 2024</strong> — 86.2190813%ile (<a href="https://drive.google.com/file/d/111S1lvkcW8ReyydUBFwQCqSEIsTrvwfw/view?usp=drive_link" target="_blank">CET Result</a>)</li>
-            <li><strong>HSC – Science Stream (PCMB + IT)</strong> — Score: 62.67% (<a href="https://drive.google.com/file/d/1hpIZM9I1jYnqDxgvwnYXJSHEZ8MXDeaN/view?usp=drive_link" target="_blank">12th Result</a>)</li>
-            <li><strong>SSC – Barkat English High School</strong> — Score: 83.20% (<a href="https://drive.google.com/file/d/1qILQYra7D3rTezGFJ_f6mgGjWIeThpwK/view?usp=drive_link" target="_blank">10th Result</a>)</li>
-        </ul>
-    </section>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <a href="https://github.com/skirfanwakil/find-your-space" target="_blank">Find Your Space ↗</a>
+                        </div>
+                    </div>
+                    <div class="card-meta">Product Planning & System Design</div>
+                    <div class="card-desc" style="margin-top: 0.5rem;">
+                        Designed platform workflow, UI, filtering logic, and Google Sheets database architecture to deliver personalized place recommendations.
+                    </div>
+                </div>
 
-    <section>
-        <h2>Experience</h2>
-        <ul>
-            <li>
-                <span class="job-title">Data Entry Operator</span><br>
-                Accurately enters, updates, and maintains information in computer systems or databases.
-            </li>
-            <li>
-                <span class="job-title">Home Tutor</span><br>
-                Teaches students by explaining concepts, solving doubts, and helping improve academic performance.
-            </li>
-        </ul>
-    </section>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <a href="https://github.com/skirfanwakil/UnityLink" target="_blank">UnityLink ↗</a>
+                        </div>
+                    </div>
+                    <div class="card-meta">Product Planning & System Design</div>
+                    <div class="card-desc" style="margin-top: 0.5rem;">
+                        Conceptualized platform UI workflows, resource matching logic, and database schemas; worked with developers to build a working prototype.
+                    </div>
+                </div>
 
-    <section>
-        <h2>Achievements</h2>
-        <ul>
-            <li>1st Position, Inter College Model Presentation Competition</li>
-            <li>2nd Position, IT PPT Competition, Parvaaz 2023</li>
-            <li>3rd Position, Best Business Planning, Parvaaz 2025</li>
-            <li>3rd Position, Corporate Chanakya, Parvaaz 2025</li>
-            <li>Participated in multiple inter-college competitions, hackathons, and tech/non-tech events</li>
-        </ul>
-    </section>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <a href="https://drive.google.com/file/d/16SxlqVFWt0ELJ20l2qlh9JhVENWo0yL_/view?usp=drive_link" target="_blank">Digital Payment Awareness ↗</a>
+                        </div>
+                    </div>
+                    <div class="card-meta">Research & Leadership</div>
+                    <div class="card-desc" style="margin-top: 0.5rem;">
+                        Conducted field research, surveyed primary data, and led an awareness initiative on safe digital transactions and fraud prevention.
+                    </div>
+                </div>
 
-    <div class="drive-link-section">
-        <strong>Document Verification:</strong> 
-        <a href="https://drive.google.com/drive/folders/1nhu1qyxtzMBHBfKPGdiHfEbXrY_Nma7p?usp=drive_link" target="_blank">RESULTS AND CERTIFICATE - Google Drive Folder</a>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <a href="https://www.google.com/search?q=skirfanwakil" target="_blank">Personal Brand SEO ↗</a>
+                        </div>
+                    </div>
+                    <div class="card-meta">SEO & Digital Identity</div>
+                    <div class="card-desc" style="margin-top: 0.5rem;">
+                        Optimized cross-platform branding and online presence to achieve first-page Google search visibility for personal identity.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section>
+            <h2>Technical & Professional Skills</h2>
+            
+            <div class="skills-group">
+                <div class="skills-title">Core Competencies</div>
+                <div class="badges">
+                    <span class="badge">Product Planning</span>
+                    <span class="badge">Requirement Analysis</span>
+                    <span class="badge">Research</span>
+                    <span class="badge">Team Collaboration</span>
+                    <span class="badge">Content Writing</span>
+                    <span class="badge">Presentation</span>
+                </div>
+            </div>
+
+            <div class="skills-group">
+                <div class="skills-title">Tools & Productivity</div>
+                <div class="badges">
+                    <span class="badge">Excel / Sheets</span>
+                    <span class="badge">Google Forms</span>
+                    <span class="badge">Word / Docs</span>
+                    <span class="badge">PowerPoint</span>
+                    <span class="badge">Canva</span>
+                </div>
+            </div>
+
+            <div class="skills-group">
+                <div class="skills-title">Programming & Databases</div>
+                <div class="badges">
+                    <span class="badge">SQL / MySQL</span>
+                    <span class="badge">Python</span>
+                    <span class="badge">Java</span>
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">HTML5 / CSS3</span>
+                    <span class="badge">C / C++ / C#</span>
+                    <span class="badge">R</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION & EXPERIENCE -->
+        <section>
+            <div class="grid grid-2">
+                <div>
+                    <h2>Education</h2>
+                    <ul class="list">
+                        <li class="list-item">
+                            <strong>B.Sc. Information Technology</strong><br>
+                            University of Mumbai (CGPA: 8.77 / 10)
+                        </li>
+                        <li class="list-item">
+                            <strong>MHTCET (PCM) 2024</strong><br>
+                            Score: 86.21 Percentile
+                        </li>
+                        <li class="list-item">
+                            <strong>HSC – Science Stream</strong><br>
+                            Score: 62.67%
+                        </li>
+                        <li class="list-item">
+                            <strong>SSC – Barkat English High School</strong><br>
+                            Score: 83.20%
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>Experience</h2>
+                    <ul class="list">
+                        <li class="list-item">
+                            <strong>Data Entry Operator</strong><br>
+                            Database maintenance and structured data entry.
+                        </li>
+                        <li class="list-item">
+                            <strong>Home Tutor</strong><br>
+                            Mentoring students, simplifying academic concepts, and doubt solving.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+        <section>
+            <h2>Achievements</h2>
+            <ul class="list">
+                <li class="list-item">🏆 1st Position, Inter-College Model Presentation Competition</li>
+                <li class="list-item">🥈 2nd Position, IT PPT Competition (Parvaaz 2023)</li>
+                <li class="list-item">🥉 3rd Position, Best Business Planning (Parvaaz 2025)</li>
+                <li class="list-item">🥉 3rd Position, Corporate Chanakya (Parvaaz 2025)</li>
+            </ul>
+        </section>
+
+        <!-- VERIFICATION LINK -->
+        <section style="text-align: center; margin-top: 3rem;">
+            <a href="https://drive.google.com/drive/folders/1nhu1qyxtzMBHBfKPGdiHfEbXrY_Nma7p?usp=drive_link" target="_blank" class="btn">
+                📁 View Verified Documents & Certificates
+            </a>
+        </section>
+
+        <footer>
+            © Shaikh Mohd Irfan. Built with zero dependencies & plain HTML/CSS.
+        </footer>
+
     </div>
 
 </body>
 </html>
+
